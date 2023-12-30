@@ -1,0 +1,14 @@
+# Use postgres/example user/password credentials
+version: '3.1'
+
+services:
+
+  db:
+    image: postgres
+    restart: "always"
+    # 本運用時はalwaysにするかを検討
+    # restart: "always"
+    environment:
+      POSTGRES_PASSWORD: hogehoge@
+    ports:
+      - 54320:5432
